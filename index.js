@@ -2,6 +2,7 @@ const inquirer = require('inquirer')
 const fs = require('fs');
 const Circle = require('./lib/circle.js');
 const Square = require('./lib/square.js');
+const Triangle = require('./lib/triangle.js');
 
 // Prompts user to choose logo text, text color, logo shape, and shape color
 inquirer
@@ -42,7 +43,7 @@ inquirer
                 logo = new Square(text, response.textColor, response.shape, response.shapeColor);
                 break;
             case 'Triangle':
-
+                logo = new Triangle(text, response.textColor, response.shape, response.shapeColor);
                 break;
         }
         const svg = 
